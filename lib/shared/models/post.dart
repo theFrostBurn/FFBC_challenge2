@@ -22,4 +22,34 @@ class Post {
     required this.replies,
     this.isLiked = false,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'userId': userId,
+      'username': username,
+      'userAvatar': userAvatar,
+      'content': content,
+      'imageUrl': imageUrl,
+      'createdAt': createdAt.toIso8601String(),
+      'likes': likes,
+      'replies': replies,
+      'isLiked': isLiked,
+    };
+  }
+
+  factory Post.fromJson(Map<String, dynamic> json) {
+    return Post(
+      id: json['id'] as String,
+      userId: json['userId'] as String,
+      username: json['username'] as String,
+      userAvatar: json['userAvatar'] as String?,
+      content: json['content'] as String,
+      imageUrl: json['imageUrl'] as String?,
+      createdAt: DateTime.parse(json['createdAt'] as String),
+      likes: json['likes'] as int,
+      replies: json['replies'] as int,
+      isLiked: json['isLiked'] as bool? ?? false,
+    );
+  }
 }
