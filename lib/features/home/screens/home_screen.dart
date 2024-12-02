@@ -2,7 +2,6 @@ import 'dart:math'; // Random 클래스를 위한 import 추가
 import 'package:flutter/material.dart';
 import '../../../shared/models/post.dart';
 import '../widgets/post_card.dart';
-import '../widgets/post_shimmer.dart';
 import '../widgets/fancy_title.dart';
 import '../../../app/theme.dart'; // AppTheme import 추가
 
@@ -87,53 +86,36 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() => _posts.clear());
           await _loadInitialPosts();
         },
-        child: Theme(
-          data: Theme.of(context).copyWith(
-            scrollbarTheme: ScrollbarThemeData(
-              thumbColor: MaterialStateProperty.all(Colors.grey[600]),
-              trackColor:
-                  MaterialStateProperty.all(Colors.grey[300]?.withOpacity(0.3)),
-              thickness: MaterialStateProperty.all(8),
-              radius: const Radius.circular(4),
-              thumbVisibility: MaterialStateProperty.all(true),
-              trackVisibility: MaterialStateProperty.all(true),
-            ),
-          ),
-          child: Scrollbar(
-            thickness: 8,
-            radius: const Radius.circular(4),
-            thumbVisibility: true,
-            interactive: true,
-            trackVisibility: true,
-            child: _posts.isEmpty && _isLoading
-                ? ListView.builder(
-                    itemCount: 3,
-                    itemBuilder: (context, index) => const PostShimmer(),
-                  )
-                : ListView.builder(
-                    controller: _scrollController,
-                    itemCount: _posts.length + (_isLoading ? 1 : 0),
-                    itemBuilder: (context, index) {
-                      if (index == _posts.length) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          alignment: Alignment.center,
-                          child: const Column(
-                            children: [
-                              CircularProgressIndicator(),
-                              SizedBox(height: 8),
-                              Text('새로운 게시글을 불러오는 중...'),
-                            ],
-                          ),
-                        );
-                      }
-                      return PostCard(
-                        post: _posts[index],
-                        onLike: () {},
-                        onReply: () {},
-                      );
-                    },
+        child: Scrollbar(
+          controller: _scrollController,
+          thickness: 8,
+          radius: const Radius.circular(4),
+          thumbVisibility: true,
+          interactive: true,
+          child: ListView.builder(
+            primary: false,
+            controller: _scrollController,
+            itemCount: _posts.length + (_isLoading ? 1 : 0),
+            itemBuilder: (context, index) {
+              if (index == _posts.length) {
+                return Container(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  alignment: Alignment.center,
+                  child: const Column(
+                    children: [
+                      CircularProgressIndicator(),
+                      SizedBox(height: 8),
+                      Text('새로운 게시글을 불러오는 중...'),
+                    ],
                   ),
+                );
+              }
+              return PostCard(
+                post: _posts[index],
+                onLike: () {},
+                onReply: () {},
+              );
+            },
           ),
         ),
       ),

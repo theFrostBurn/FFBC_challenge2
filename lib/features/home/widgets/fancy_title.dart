@@ -26,7 +26,7 @@ class FancyTitle extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
+          const Icon(
             Icons.cookie_outlined,
             color: AppTheme.accentColor,
             size: 24,
@@ -42,7 +42,7 @@ class FancyTitle extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          Icon(
+          const Icon(
             Icons.cookie_outlined,
             color: AppTheme.accentColor,
             size: 24,

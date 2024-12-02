@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
       id: 'p1',
       userId: 'cookiemonster',
       username: 'Cookie Monster',
-      userAvatar: 'https://i.pravatar.cc/150?img=8',
+      userAvatar: 'assets/images/cookie_monster.png',
       content: '오늘의 쿠키 리뷰! 초코칩이 가득한 이 쿠키는 정말 환상적이에요! '
           'OM NOM NOM NOM! 🍪✨\n\n'
           '#쿠키스타그램 #쿠키맛집 #쿠키리뷰 #COOKIEEEEE',
@@ -69,7 +69,7 @@ class ProfileScreen extends StatelessWidget {
       id: 'p2',
       userId: 'cookiemonster',
       username: 'Cookie Monster',
-      userAvatar: 'https://i.pravatar.cc/150?img=8',
+      userAvatar: 'assets/images/cookie_monster.png',
       content: '쿠키가 없어서 슬픈 날... 😭\n'
           '누가 나에게 쿠키를 줄 착한 사람 없나요?\n'
           'ME NEED COOKIE NOW! 🍪\n'
@@ -83,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
       id: 'p3',
       userId: 'cookiemonster',
       username: 'Cookie Monster',
-      userAvatar: 'https://i.pravatar.cc/150?img=8',
+      userAvatar: 'assets/images/cookie_monster.png',
       content: '새로운 쿠키 레시피를 배웠어요! 🧁\n'
           '하지만... 반죽을 다 먹어버렸네요 😅\n'
           'ME SORRY... BUT ME LOVE COOKIE DOUGH TOO!\n'
