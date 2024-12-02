@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import '../../../shared/widgets/profile_avatar.dart';
 
 class ProfileHeader extends StatelessWidget {
   final String username;
@@ -30,9 +30,10 @@ class ProfileHeader extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              CircleAvatar(
+              ProfileAvatar(
+                imageUrl: avatar,
+                name: name,
                 radius: 40,
-                backgroundImage: CachedNetworkImageProvider(avatar),
               ),
               const SizedBox(width: 24),
               Expanded(

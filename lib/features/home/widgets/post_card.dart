@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../../shared/models/post.dart';
 import '../../../app/theme.dart';
+import '../../../shared/widgets/profile_avatar.dart';
 
 class PostCard extends StatelessWidget {
   final Post post;
@@ -27,8 +28,9 @@ class PostCard extends StatelessWidget {
             // 사용자 정보 행
             Row(
               children: [
-                CircleAvatar(
-                  backgroundImage: CachedNetworkImageProvider(post.userAvatar),
+                ProfileAvatar(
+                  imageUrl: post.userAvatar,
+                  name: post.username,
                   radius: 20,
                 ),
                 const SizedBox(width: 12),

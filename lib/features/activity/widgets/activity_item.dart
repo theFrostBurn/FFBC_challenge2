@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../../shared/widgets/profile_avatar.dart';
 
 class ActivityItem extends StatelessWidget {
   final String userAvatar;
@@ -27,9 +28,10 @@ class ActivityItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
           children: [
-            CircleAvatar(
+            ProfileAvatar(
+              imageUrl: userAvatar,
+              name: username,
               radius: 24,
-              backgroundImage: CachedNetworkImageProvider(userAvatar),
             ),
             const SizedBox(width: 12),
             Expanded(

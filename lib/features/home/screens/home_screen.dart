@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
       id: '1',
       userId: 'user1',
       username: '김철수',
-      userAvatar: 'https://i.pravatar.cc/150?img=1',
+      userAvatar: null, // 이미지 없음 - 이니셜 'ㄱ' 표시
       content: '오늘은 날씨가 정말 좋네요! 다들 즐거운 하루 보내세요 😊',
       createdAt: DateTime.now().subtract(const Duration(hours: 2)),
       likes: 42,
@@ -124,13 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
       id: '2',
       userId: 'user2',
       username: '이영희',
-      userAvatar: 'https://i.pravatar.cc/150?img=5',
+      userAvatar: '', // 빈 문자열 - 이니셜 'ㅇ' 표시
       content: '새로운 프로젝트를 시작했어요! 열심히 해보겠습니다 💪',
-      imageUrl: 'https://picsum.photos/400/300',
       createdAt: DateTime.now().subtract(const Duration(hours: 5)),
       likes: 128,
       replies: 12,
     ),
-    // 더 많은 더미 데이터 추가 가능
   ];
 }

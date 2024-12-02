@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import '../../../shared/widgets/profile_avatar.dart';
 
 class SearchResultCard extends StatelessWidget {
   final String username;
@@ -23,9 +23,10 @@ class SearchResultCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
           children: [
-            CircleAvatar(
+            ProfileAvatar(
+              imageUrl: userAvatar,
+              name: username,
               radius: 24,
-              backgroundImage: CachedNetworkImageProvider(userAvatar),
             ),
             const SizedBox(width: 12),
             Expanded(

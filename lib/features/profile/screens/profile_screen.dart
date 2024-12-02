@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
             bio: '쿠키를 사랑하는 털복숭이 괴물 🍪\n'
                 '쿠키 먹방 전문가 | 세서미 스트리트 주민\n'
                 'ME WANT COOKIE! ME EAT COOKIE! OM NOM NOM! 🤤',
-            avatar: 'https://i.pravatar.cc/150?img=8',
+            avatar: 'assets/images/cookie_monster.png',
             posts: 1234,
             followers: 9999,
             following: 42,

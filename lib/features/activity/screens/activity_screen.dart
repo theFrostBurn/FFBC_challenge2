@@ -31,29 +31,27 @@ class ActivityScreen extends StatelessWidget {
   }
 
   // 더미 활동 데이터
-  static final List<Map<String, String>> _dummyActivities = [
+  static final List<Map<String, String?>> _dummyActivities = [
     {
-      'userAvatar': 'https://i.pravatar.cc/150?img=1',
+      'userAvatar': '', // 빈 문자열 - 이니셜 표시
       'username': '김철수',
       'action': '님이 회원님의 게시물을 좋아합니다.',
       'time':
           DateTime.now().subtract(const Duration(minutes: 5)).toIso8601String(),
-      'postImage': 'https://picsum.photos/200/200?random=1',
     },
     {
-      'userAvatar': 'https://i.pravatar.cc/150?img=2',
+      'userAvatar': null, // null - 이니셜 표시
       'username': '이영희',
       'action': '님이 회원님을 팔로우하기 시작했습니다.',
       'time':
           DateTime.now().subtract(const Duration(hours: 2)).toIso8601String(),
     },
     {
-      'userAvatar': 'https://i.pravatar.cc/150?img=3',
+      'userAvatar': '', // 빈 문자열 - 이니셜 표시
       'username': '박지민',
       'action': '님이 회원님의 게시물에 댓글을 남겼습니다: "멋져요! 👍"',
       'time':
           DateTime.now().subtract(const Duration(hours: 5)).toIso8601String(),
-      'postImage': 'https://picsum.photos/200/200?random=2',
     },
   ];
 }

@@ -31,7 +31,7 @@ class _SearchScreenState extends State<SearchScreen> {
     super.dispose();
   }
 
-  List<Map<String, String>> _getFilteredResults() {
+  List<Map<String, String?>> _getFilteredResults() {
     if (_searchQuery.isEmpty) return [];
     return _dummyUsers.where((user) {
       final username = user['username']?.toLowerCase() ?? '';
@@ -98,31 +98,21 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   // 더미 사용자 데이터
-  static final List<Map<String, String>> _dummyUsers = [
+  static final List<Map<String, String?>> _dummyUsers = [
     {
       'username': '김철수',
-      'avatar': 'https://i.pravatar.cc/150?img=1',
+      'avatar': '',
       'bio': '프로그래머 | 플러터 개발자',
     },
     {
       'username': '이영희',
-      'avatar': 'https://i.pravatar.cc/150?img=2',
+      'avatar': null,
       'bio': '디자이너 | UI/UX 전문가',
     },
     {
       'username': '박지민',
-      'avatar': 'https://i.pravatar.cc/150?img=3',
+      'avatar': '',
       'bio': '사진작가 | 여행 블로거',
-    },
-    {
-      'username': '최민수',
-      'avatar': 'https://i.pravatar.cc/150?img=4',
-      'bio': '요리사 | 푸드 스타일리스트',
-    },
-    {
-      'username': '정다운',
-      'avatar': 'https://i.pravatar.cc/150?img=5',
-      'bio': '작가 | 시인',
     },
   ];
 }
