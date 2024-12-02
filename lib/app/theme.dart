@@ -25,8 +25,9 @@ class AppTheme {
       primary: accentColor,
       secondary: secondaryColor,
       surface: greyColor,
-      background: primaryColor,
+      surfaceContainerHighest: primaryColor,
       error: errorColor,
+      onSurface: secondaryColor,
     ),
 
     // AppBar 테마

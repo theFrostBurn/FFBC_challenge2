@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 import '../../../shared/models/post.dart';
 import '../widgets/post_card.dart';
 import '../widgets/post_shimmer.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../widgets/search_result_card.dart';
-import '../../../app/theme.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

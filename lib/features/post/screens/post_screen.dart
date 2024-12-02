@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import '../widgets/image_picker_button.dart';
 import '../../../app/theme.dart';
 
@@ -115,7 +114,7 @@ class _PostScreenState extends State<PostScreen> {
                 ),
               Container(
                 padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   border: Border(
                     top: BorderSide(
                       color: AppTheme.greyColor,
