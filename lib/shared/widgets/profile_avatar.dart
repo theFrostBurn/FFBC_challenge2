@@ -62,13 +62,14 @@ class ProfileAvatar extends StatelessWidget {
 
   // 이름에 따라 다른 색상을 반환하는 메서드
   Color _getAvatarColor(String name) {
+    // 무채색 계열의 색상 팔레트
     final colors = [
-      Colors.blue[700]!,
-      Colors.green[700]!,
-      Colors.purple[700]!,
-      Colors.orange[700]!,
-      Colors.red[700]!,
-      Colors.teal[700]!,
+      const Color(0xFF424242), // 진한 회색
+      const Color(0xFF616161), // 중간 회색
+      const Color(0xFF757575), // 밝은 회색
+      const Color(0xFF555555), // 중간 진한 회색
+      const Color(0xFF666666), // 중간 밝은 회색
+      const Color(0xFF4A4A4A), // 약간 진한 회색
     ];
 
     // 이름의 각 문자 ASCII 값을 더해서 색상 인덱스 결정
